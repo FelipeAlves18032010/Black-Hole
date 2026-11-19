@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title_back">Bastidores — Black Hole</title>
+    <meta name="description" data-i18n-content="desc_back" content="Os bastidores do Ouro do Norte: eventos, casos de uso, fluxo de dados, classes e banco de dados. Os diagramas que guiaram a construção do sistema.">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="IMG/pwa/apple-touch-icon.png">
+    <meta name="theme-color" content="#0d0b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Black Hole">
+    <!-- Aplica o tamanho de texto/imagem salvo antes da página aparecer -->
+    <script src="./JS/acessibilidade.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+    <div class="starfield" id="starfield" aria-hidden="true"></div>
+
+    <header class="topbar" id="siteHeader"></header>
+
+    <main id="conteudo">
+      <header class="page-hero">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="back_eyebrow">Ouro do Norte</p>
+          <h1 data-i18n="back_h1">Bastidores</h1>
+          <p class="lead" data-i18n="back_lead">O que a gente desenhou, escreveu e planejou antes e durante a programação do Ouro do Norte. Clique em qualquer diagrama para ver em tela cheia.</p>
+          <div class="crumbs"><a class="chip" href="#como-ajudou" data-i18n="chip_help">Como isso ajudou</a><a class="chip" href="#analise" data-i18n="chip_analysis">Análise</a><a class="chip" href="#dfd" data-i18n="chip_dfd">Fluxo de dados</a><a class="chip" href="#classes" data-i18n="chip_cls">Classes</a><a class="chip" href="#banco" data-i18n="chip_db">Banco de dados</a></div>
+        </div>
+      </header>
+      <section class="section" id="como-ajudou">
+        <div class="wrap prose">
+          <h2 data-i18n="bk_t">Por que mostramos os bastidores</h2>
+          <p data-i18n="bk_p1">Um sistema bom não começa no código: começa no papel. Antes de programar o Ouro do Norte, a gente parou para entender o problema, listar o que o sistema precisava fazer e desenhar como as informações iriam circular. Essa parte da análise é pouco visível para quem usa o sistema, mas é ela que evita retrabalho e erro lá na frente.</p>
+          <p data-i18n="bk_p2">Na prática, cada diagrama respondeu a uma pergunta. Os eventos e os casos de uso disseram o que acontece e quem faz o quê. O fluxo de dados mostrou de onde cada informação vem e para onde vai. O diagrama de classes organizou as peças do sistema e o modelo do banco de dados definiu onde cada dado fica guardado.</p>
+          <p data-i18n="bk_p3">Por isso, quando chegou a hora de programar, a equipe já sabia o que construir: o código seguiu o desenho, as telas seguiram os casos de uso e o banco de dados já nasceu organizado. É esse jeito de trabalhar que a gente leva para os projetos dos nossos clientes.</p>
+          <p class="note-link"><a class="text-link" href="ouro-do-norte.html"><span data-i18n="bk_back">Voltar para o Ouro do Norte</span> <span aria-hidden="true">&rarr;</span></a></p>
+        </div>
+      </section>
+      <section class="section" id="analise">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="chip_analysis">Análise</p>
+            <h2 data-i18n="an_t">Análise: o que o sistema precisa fazer</h2>
+            <p class="lead" data-i18n="an_lead">Primeiro entendemos o que acontece no dia a dia e quem participa.</p>
+          </div>
+          <div class="diag" id="eventos">
+            <div class="diag-text diag-wide"><h3 data-i18n="ev_t">Eventos do sistema</h3><p data-i18n="ev_p">Mapeamos tudo o que acontece com o sistema, do acesso do funcionário à gestão dos parâmetros. São nove eventos, e cada um virou uma parte do sistema.</p><ul class="tags"><li><b>E01</b><span data-i18n="ev1">Funcionário acessa o sistema</span></li><li><b>E02</b><span data-i18n="ev2">Funcionário gerencia lote</span></li><li><b>E03</b><span data-i18n="ev3">Sistema calcula validade e valor</span></li><li><b>E04</b><span data-i18n="ev4">Funcionário gera e imprime etiqueta</span></li><li><b>E05</b><span data-i18n="ev5">Funcionário consulta histórico</span></li><li><b>E06</b><span data-i18n="ev6">Funcionário solicita reimpressão</span></li><li><b>E07</b><span data-i18n="ev7">Funcionário solicita cancelamento</span></li><li><b>E08</b><span data-i18n="ev8">Sistema identifica vencimento</span></li><li><b>E09</b><span data-i18n="ev9">Administrador gerencia parâmetros</span></li></ul></div>
+            
+          </div>
+          
+          <div class="diag rev" id="casos">
+            <div class="diag-text"><h3 data-i18n="uc_t">Casos de uso (UML)</h3><p data-i18n="uc_p">O diagrama mostra 17 casos de uso, ou seja, 17 coisas que alguém consegue fazer no sistema, e quem participa de cada uma: o funcionário, o gerente (que herda tudo o que o funcionário faz) e a impressora. Ele serviu de lista de telas e funções.</p></div>
+            <figure class="figure">
+            <button type="button" class="zoom-open wide" aria-haspopup="dialog" data-hint="Clique para ampliar" data-i18n-hint="zoom_hint">
+              <img src="IMG/diagramas/uml-casos-de-uso.png" alt="Diagrama UML de casos de uso do sistema Ouro do Norte, com os atores Funcionário, Gerente e Impressora." data-i18n-alt="uml_alt">
+            </button>
+            <figcaption data-i18n="uml_cap">Diagrama de casos de uso</figcaption>
+          </figure>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="section" id="dfd">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="chip_dfd">Fluxo de dados</p>
+            <h2 data-i18n="dfd_t">Fluxo de dados (DFD)</h2>
+            <p class="lead" data-i18n="dfd_lead">Para onde cada informação vai, e por onde passa até ficar guardada.</p>
+          </div>
+          <div class="diag" id="dfd-ctx">
+            <div class="diag-text"><h3 data-i18n="dc_t">DFD de contexto</h3><p data-i18n="dc_p">A visão mais simples: o sistema no centro e quem conversa com ele (funcionário, administrador e impressora), com as informações que entram e saem.</p></div>
+            <figure class="figure">
+            <button type="button" class="zoom-open " aria-haspopup="dialog" data-hint="Clique para ampliar" data-i18n-hint="zoom_hint">
+              <img src="IMG/diagramas/dfd-contexto.png" alt="Diagrama de fluxo de dados de contexto: o sistema da Ouro do Norte e suas trocas com Funcionário, Administrador e Impressora." data-i18n-alt="dfd0_alt">
+            </button>
+            <figcaption data-i18n="dfd0_cap">DFD de contexto</figcaption>
+          </figure>
+          </div>
+          
+          <div class="diag rev" id="dfd-0">
+            <div class="diag-text"><h3 data-i18n="dz_t">DFD de nível 0</h3><p data-i18n="dz_p">Abre o sistema por dentro: 5 processos (acesso, lote, etiqueta, histórico e administração) e 4 depósitos onde os dados ficam guardados. É o mapa que mostra o caminho de cada dado.</p></div>
+            <figure class="figure">
+            <button type="button" class="zoom-open wide" aria-haspopup="dialog" data-hint="Clique para ampliar" data-i18n-hint="zoom_hint">
+              <img src="IMG/diagramas/dfd-nivel-0.png" alt="Diagrama de fluxo de dados nível 0 com os processos P1 acesso, P2 lote, P3 etiqueta, P4 histórico e P5 admin e os depósitos D1 a D4." data-i18n-alt="dfd1_alt">
+            </button>
+            <figcaption data-i18n="dfd1_cap">DFD de nível 0</figcaption>
+          </figure>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="section" id="classes">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="chip_cls">Classes</p>
+            <h2 data-i18n="cl_t">Diagrama de classes</h2>
+            <p class="lead" data-i18n="cl_lead">As peças do sistema e como elas se encaixam.</p>
+          </div>
+          <div class="diag" id="cls">
+            <div class="diag-text"><h3 data-i18n="cs_t">Organizando as peças</h3><p data-i18n="cs_p">O diagrama de classes organiza o sistema em Funcionário, Gerente, Produto, Lote, Etiqueta, Impressora, Histórico de Etiquetas e Parâmetros do Sistema, com o que cada peça guarda e o que cada uma sabe fazer. É a ponte entre o desenho e o código.</p></div>
+            <figure class="figure">
+            <button type="button" class="zoom-open wide" aria-haspopup="dialog" data-hint="Clique para ampliar" data-i18n-hint="zoom_hint">
+              <img src="IMG/diagramas/diagrama-de-classes.png" alt="Diagrama de classes do sistema Ouro do Norte com as classes Funcionário, Gerente, Produto, Lote, Etiqueta, Impressora, Histórico de Etiquetas e Parâmetros do Sistema." data-i18n-alt="cls_alt">
+            </button>
+            <figcaption data-i18n="cls_cap">Diagrama de classes</figcaption>
+          </figure>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="section" id="banco">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="chip_db">Banco de dados</p>
+            <h2 data-i18n="der_title">Modelo entidade-relacionamento</h2>
+            <p class="lead" data-i18n="db_lead">Por fim, o modelo do banco de dados define as 7 tabelas que guardam tudo e como elas se ligam. É o trabalho de organização de dados que sustenta o sistema inteiro.</p>
+          </div>
+          <figure class="figure">
+            <button type="button" class="zoom-open small" aria-haspopup="dialog" data-hint="Clique para ampliar" data-i18n-hint="zoom_hint">
+              <img src="IMG/diagramas/der-banco-de-dados.png" alt="Diagrama entidade-relacionamento com as entidades Produto, Categoria de Produto, Lote, Etiqueta, Usuário, Impressora e Histórico de Etiqueta." data-i18n-alt="der_alt">
+            </button>
+            <figcaption data-i18n="der_cap">Diagrama entidade-relacionamento</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="entidades">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="ent_title">As 7 entidades</h2>
+            <p class="lead" data-i18n="ent_lead">Cada cartão é uma tabela. PK marca a chave primária (o identificador) e FK marca a chave estrangeira (a ligação com outra tabela).</p>
+          </div>
+          <div class="grid">
+          <article class="card entity"><h3 data-i18n="e1_t">Usuário</h3><span class="code">USUARIO</span><p data-i18n="e1_p">Funcionários e gerentes que acessam o sistema. O campo perfil define o que cada um pode fazer.</p><ul class="attrs"><li><span>id_usuario</span><span class="badge pk">PK</span></li><li><span>nome</span></li><li><span>email</span></li><li><span>senha</span></li><li><span>perfil</span></li></ul></article>
+          <article class="card entity"><h3 data-i18n="e2_t">Categoria de produto</h3><span class="code">CATEGORIA_PRODUTO</span><p data-i18n="e2_p">Agrupa os produtos e guarda o prazo de validade em dias, usado no cálculo da validade.</p><ul class="attrs"><li><span>id_categoria</span><span class="badge pk">PK</span></li><li><span>nome_categoria</span></li><li><span>prazo_validade_dias</span></li></ul></article>
+          <article class="card entity"><h3 data-i18n="e3_t">Produto</h3><span class="code">PRODUTO</span><p data-i18n="e3_p">Cada item que recebe etiqueta. Todo produto pertence a uma categoria.</p><ul class="attrs"><li><span>id_produto</span><span class="badge pk">PK</span></li><li><span>codigo_produto</span></li><li><span>nome_produto</span></li><li><span>id_categoria</span><span class="badge fk">FK</span></li></ul></article>
+          <article class="card entity"><h3 data-i18n="e4_t">Lote</h3><span class="code">LOTE</span><p data-i18n="e4_p">Um produto embalado em uma data, com peso líquido, tara, preço por kg e validade.</p><ul class="attrs"><li><span>id_lote</span><span class="badge pk">PK</span></li><li><span>codigo_lote</span></li><li><span>peso_liquido</span></li><li><span>tara</span></li><li><span>preco_por_kg</span></li><li><span>data_embalagem</span></li><li><span>data_validade</span></li><li><span>id_produto</span><span class="badge fk">FK</span></li><li><span>id_usuario_cadastro</span><span class="badge fk">FK</span></li></ul></article>
+          <article class="card entity"><h3 data-i18n="e5_t">Etiqueta</h3><span class="code">ETIQUETA</span><p data-i18n="e5_p">Etiqueta gerada a partir de um lote, com seu status e a data de geração.</p><ul class="attrs"><li><span>id_etiqueta</span><span class="badge pk">PK</span></li><li><span>status</span></li><li><span>data_geracao</span></li><li><span>id_lote</span><span class="badge fk">FK</span></li></ul></article>
+          <article class="card entity"><h3 data-i18n="e6_t">Impressora</h3><span class="code">IMPRESSORA</span><p data-i18n="e6_p">Impressoras cadastradas. O campo ativa mostra se ela está em uso.</p><ul class="attrs"><li><span>id_impressora</span><span class="badge pk">PK</span></li><li><span>nome_impressora</span></li><li><span>identificador</span></li><li><span>ativa</span></li></ul></article>
+          <article class="card entity"><h3 data-i18n="e7_t">Histórico de etiqueta</h3><span class="code">HISTORICO_ETIQUETA</span><p data-i18n="e7_p">Registro de cada ação sobre uma etiqueta: quem fez, quando, em qual impressora, quantas cópias e o motivo.</p><ul class="attrs"><li><span>id_historico</span><span class="badge pk">PK</span></li><li><span>id_etiqueta</span><span class="badge fk">FK</span></li><li><span>id_usuario</span><span class="badge fk">FK</span></li><li><span>id_impressora</span><span class="badge fk">FK</span></li><li><span>tipo_acao</span></li><li><span>data_hora</span></li><li><span>quantidade_copias</span></li><li><span>motivo</span></li></ul></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="relacoes">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="rel_title">Como as tabelas se ligam</h2>
+            <p class="lead" data-i18n="rel_lead">Lemos cada linha da esquerda para a direita.</p>
+          </div>
+          <ul class="rel-list">
+          <li><b data-i18n="rel1_a">Categoria</b><span data-i18n="rel1_p">classifica vários produtos. Cada produto tem uma só categoria.</span><span class="card-n">1 : N</span></li>
+          <li><b data-i18n="rel2_a">Produto</b><span data-i18n="rel2_p">pode ter vários lotes. Cada lote é de um único produto.</span><span class="card-n">1 : N</span></li>
+          <li><b data-i18n="rel3_a">Usuário</b><span data-i18n="rel3_p">cadastra vários lotes. Cada lote guarda quem o cadastrou.</span><span class="card-n">1 : N</span></li>
+          <li><b data-i18n="rel4_a">Lote</b><span data-i18n="rel4_p">gera várias etiquetas. Cada etiqueta vem de um só lote.</span><span class="card-n">1 : N</span></li>
+          <li><b data-i18n="rel5_a">Etiqueta</b><span data-i18n="rel5_p">tem pelo menos um registro no histórico.</span><span class="card-n">1 : N</span></li>
+          <li><b data-i18n="rel6_a">Usuário</b><span data-i18n="rel6_p">realiza várias ações. Todo registro do histórico tem um usuário.</span><span class="card-n">1 : N</span></li>
+          <li><b data-i18n="rel7_a">Impressora</b><span data-i18n="rel7_p">pode aparecer em vários registros. Um registro pode não ter impressora.</span><span class="card-n">1 : N</span></li>
+          </ul>
+          <div class="cta-row"><a href="ouro-do-norte.html" class="cta-button"><span class="arrow-circle" aria-hidden="true">&larr;</span><span class="cta-text" data-i18n="next_ouro">Voltar ao Ouro do Norte</span></a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="siteFooter"></footer>
+
+    <!-- AMPLIAR IMAGEM -->
+    <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada" data-i18n-aria="lb_label">
+      <div class="lb-bar">
+        <span class="lb-title"></span>
+        <div class="stepper">
+          <button type="button" data-lb="out" data-i18n-aria="lb_out" aria-label="Diminuir">−</button>
+          <output data-lb-value aria-live="polite">100%</output>
+          <button type="button" data-lb="in" data-i18n-aria="lb_in" aria-label="Aumentar">+</button>
+          <button type="button" data-lb="close" data-i18n="lb_close">Fechar</button>
+        </div>
+      </div>
+      <div class="lb-stage"><img src="" alt=""></div>
+    </dialog>
+
+    <script src="./JS/config.js"></script>
+    <script src="./JS/textos.js"></script>
+    <script src="./JS/header.js"></script>
+    <script src="./JS/footer.js"></script>
+    <script src="./JS/i18n.js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>

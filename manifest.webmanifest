@@ -1,0 +1,30 @@
+{
+  "name": "Black Hole",
+  "short_name": "Black Hole",
+  "description": "Sites e sistemas sob medida para pequenos negócios.",
+  "lang": "pt-BR",
+  "id": "./index.html",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d0b14",
+  "theme_color": "#0d0b14",
+  "icons": [
+    {
+      "src": "IMG/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "IMG/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "IMG/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

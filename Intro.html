@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole - Bem-vindo</title>
+    <link rel="stylesheet" href="./CSS/intro.css">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+</head>
+<body>
+
+    <!-- CONTAINER DO VÍDEO -->
+    <div class="video-container">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="videos/Blackhole.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÃO OPCIONAL PARA PULAR -->
+        <a href="index.html" class="skip-btn" id="skipBtn">PULAR INTRO &rarr;</a>
+    </div>
+
+    <script>
+        // Mostra o botão de pular no idioma escolhido no site
+        try { if (localStorage.getItem('idioma') === 'en') document.getElementById('skipBtn').textContent = 'SKIP INTRO \u2192'; } catch (e) {}
+
+        const video = document.getElementById('intro-video');
+
+        // Função que redireciona para a página principal
+        function irParaSite() {
+            window.location.href = 'index.html';
+        }
+
+        // 1. Redireciona assim que o vídeo terminar de rodar
+        video.addEventListener('ended', irParaSite);
+
+        // 2. Segurança: Redireciona após 6 segundos caso o vídeo trave ou demore
+        setTimeout(irParaSite, 3000); // 6000ms = 6 segundos (ajuste se seu vídeo for maior/menor)
+    </script>
+</body>
+</html>

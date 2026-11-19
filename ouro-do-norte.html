@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title_ouro">Ouro do Norte — Black Hole</title>
+    <meta name="description" data-i18n-content="desc_ouro" content="Conheça o Ouro do Norte, o primeiro projeto da Black Hole: um sistema para controlar lotes e imprimir etiquetas com validade, peso e preço.">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="IMG/pwa/apple-touch-icon.png">
+    <meta name="theme-color" content="#0d0b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Black Hole">
+    <!-- Aplica o tamanho de texto/imagem salvo antes da página aparecer -->
+    <script src="./JS/acessibilidade.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+    <div class="starfield" id="starfield" aria-hidden="true"></div>
+
+    <header class="topbar" id="siteHeader"></header>
+
+    <main id="conteudo">
+      <header class="page-hero">
+        <div class="wrap hero-split">
+          <div class="hero-text">
+            <p class="eyebrow" data-i18n="ouro_eyebrow">Primeiro projeto da Black Hole</p>
+            <h1 data-i18n="ouro_h1">Ouro do Norte</h1>
+            <p class="lead" data-i18n="ouro_lead">Um sistema web para controlar lotes de produtos e imprimir etiquetas com validade, peso e preço, sem conta feita à mão e sem perder o histórico.</p>
+            <div class="crumbs"><a class="chip" href="#pitch" data-i18n="chip_pitch">Vídeo pitch</a><a class="chip" href="#o-que-e" data-i18n="chip_what">O que é</a><a class="chip" href="#o-que-faz" data-i18n="chip_does">O que faz</a><a class="chip" href="#pesquisa" data-i18n="chip_places">Onde pesquisamos</a><a class="chip" href="#identidade" data-i18n="chip_ident">Identidade visual</a></div>
+          </div>
+          <div class="logo-ouro-art">
+            <img class="logo-ouro" src="IMG/Logo Ouro do Norte.png" alt="Logo do Ouro do Norte" data-i18n-alt="ouro_logo_alt">
+          </div>
+        </div>
+      </header>
+
+      <section class="section" id="pitch" aria-labelledby="pitchTitle">
+        <div class="wrap">
+          <div class="pitch ouro-pitch" data-pitch="videos/Ouro Norte.mp4" data-fallback="videos/Ouro Norte.mp4" data-poster="IMG/Logo Ouro do Norte.png">
+          <div class="pitch-copy">
+            <p class="eyebrow" data-i18n="pou_eyebrow">Vídeo pitch do projeto</p>
+            <h2 id="pitchTitle" data-i18n="pou_title">Veja o Ouro do Norte funcionando</h2>
+            <p class="lead" data-i18n="pou_p1">Neste vídeo você acompanha as telas do sistema: do cadastro de um lote até a etiqueta pronta para imprimir, passando pelo histórico e pelos alertas de vencimento.</p>
+            <p data-i18n="pou_p2">Clique no botão para assistir em tela cheia. Para sair, aperte Esc ou use o botão Fechar.</p>
+            <button type="button" class="cta-button pitch-open"><span class="arrow-circle" aria-hidden="true">&#9654;</span><span class="cta-text" data-i18n="pou_btn">Assistir em tela cheia</span></button>
+          </div>
+          <button type="button" class="pitch-cover pitch-open" aria-label="Assistir em tela cheia" data-i18n-aria="pou_cover">
+            <video class="pitch-preview" muted loop autoplay playsinline preload="metadata" poster="IMG/Logo Ouro do Norte.png" aria-hidden="true">
+              <source src="videos/Ouro Norte.mp4" type="video/mp4">
+            </video>
+            <span class="pitch-play" aria-hidden="true">&#9654;</span>
+          </button>
+        </div>
+        </div>
+      </section>
+
+<section class="section" id="o-que-e">
+        <div class="wrap split">
+          <div>
+            <h2 data-i18n="what_title">O que é o Ouro do Norte</h2>
+            <p data-i18n="what_p1">É o Sistema de Gestão e Impressão de Etiquetas. Ele apoia o cadastro de lotes, o cálculo de validade e de preço, a geração e a impressão das etiquetas, a consulta do histórico e o acompanhamento de vencimentos, sempre com o registro de tudo o que foi feito.</p>
+            <p style="margin-top:1rem" data-i18n="what_p2">Cada etiqueta sai com as informações que o cliente precisa ver:</p>
+            <ul class="checklist"><li data-i18n="what_i1">nome do produto</li><li data-i18n="what_i2">peso líquido e tara</li><li data-i18n="what_i3">código do lote</li><li data-i18n="what_i4">data de validade</li><li data-i18n="what_i5">preço por kg e valor total</li><li data-i18n="what_i6">responsável pela emissão</li></ul>
+          </div>
+          <figure class="figure">
+            <button type="button" class="zoom-open label-preview" aria-haspopup="dialog" data-hint="Clique para ampliar" data-i18n-hint="zoom_hint">
+              <img src="IMG/etiqueta.png" alt="Exemplo de etiqueta do Ouro do Norte para queijo muçarela, com produto, lote, validade, data de fabricação, tara, peso líquido, peso drenado, total em reais, ingredientes, alérgicos e informação nutricional." data-i18n-alt="label_img_alt">
+            </button>
+            <figcaption class="label-note" data-i18n="lbl_example">Exemplo ilustrativo de etiqueta, com dados de teste. Clique para ampliar.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="o-que-faz">
+        <div class="wrap">
+          <div class="section-head"><h2 data-i18n="does_title">O que o sistema faz (requisitos funcionais)</h2></div>
+          <div class="grid">
+          <article class="card"><span class="rf" aria-hidden="true">RF01</span><h3 data-i18n="f1_t">Acesso</h3><p data-i18n="f1_p">Cadastro e login de funcionários com nome, e-mail e senha.</p></article>
+          <article class="card"><span class="rf" aria-hidden="true">RF02</span><h3 data-i18n="f2_t">Lotes</h3><p data-i18n="f2_p">Cadastro de lotes com peso líquido, tara, código, produto, preço por kg e data de embalagem. O sistema confere os dados e barra lote repetido.</p></article>
+          <article class="card"><span class="rf" aria-hidden="true">RF03</span><h3 data-i18n="f3_t">Validade e valor</h3><p data-i18n="f3_p">Calcula a validade (data de embalagem mais o prazo da categoria) e o valor total (peso líquido vezes preço por kg).</p></article>
+          <article class="card"><span class="rf" aria-hidden="true">RF04</span><h3 data-i18n="f4_t">Etiquetas</h3><p data-i18n="f4_p">Mostra a prévia, define as cópias, escolhe a impressora e envia para imprimir.</p></article>
+          <article class="card"><span class="rf" aria-hidden="true">RF05</span><h3 data-i18n="f5_t">Histórico</h3><p data-i18n="f5_p">Busca por lote, produto, operador ou período. Permite reimprimir ou cancelar, guardando o motivo.</p></article>
+          <article class="card"><span class="rf" aria-hidden="true">RF06</span><h3 data-i18n="f6_t">Alertas de vencimento</h3><p data-i18n="f6_p">Avisa quando um produto está perto de vencer e destaca o que já venceu. O número de dias do aviso muda de acordo com o produto.</p></article>
+          <article class="card"><span class="rf" aria-hidden="true">RF07</span><h3 data-i18n="f7_t">Parâmetros</h3><p data-i18n="f7_p">O gerente configura produtos, categorias, prazos de validade e impressoras.</p></article>
+          </div>
+        </div>
+      </section>
+
+            <section class="section" id="requisitos">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="req_t">Os requisitos do projeto</h2>
+            <p class="lead" data-i18n="req_p">Antes de programar, escrevemos o que o sistema precisa fazer, que qualidades precisa ter e quais regras do negócio ele segue. É essa lista que guia todo o trabalho. Os passos seguintes, como os diagramas, estão nos bastidores.</p>
+          </div>
+          <div class="stats stats-row">
+            <div class="stat"><b>7</b><span data-i18n="req_a">grupos de requisitos funcionais</span></div>
+            <div class="stat"><b>7</b><span data-i18n="req_b">requisitos não funcionais (qualidades que o sistema precisa ter)</span></div>
+            <div class="stat"><b>6</b><span data-i18n="req_c">regras de negócio</span></div>
+          </div>
+          <div class="cta-row"><a href="bastidores.html" class="cta-button"><span class="arrow-circle" aria-hidden="true">&rarr;</span><span class="cta-text" data-i18n="req_cta">Ver os bastidores</span></a></div>
+        </div>
+      </section>
+
+      <section class="section" id="quem-usa">
+        <div class="wrap">
+          <div class="section-head"><h2 data-i18n="who_title">Quem usa o sistema</h2></div>
+          <div class="grid">
+          <article class="card"><h3 data-i18n="who1_t">Funcionário</h3><p data-i18n="who1_p">Entra no sistema, cadastra lotes, gera e imprime etiquetas e consulta o histórico.</p></article>
+          <article class="card"><h3 data-i18n="who2_t">Gerente</h3><p data-i18n="who2_p">Faz tudo o que o funcionário faz e também configura produtos, prazos de validade e impressoras.</p></article>
+          <article class="card"><h3 data-i18n="who3_t">Impressora</h3><p data-i18n="who3_p">Recebe as etiquetas enviadas pelo sistema. O projeto prevê impressoras térmicas.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="regras">
+        <div class="wrap">
+          <div class="section-head"><h2 data-i18n="rules_title">Regras que o sistema segue</h2></div>
+          <div class="grid">
+          <article class="card"><h3 data-i18n="r1_t">Validade</h3><p data-i18n="r1_p">A data de validade é a data de embalagem somada ao prazo definido para a categoria do produto.</p></article>
+          <article class="card"><h3 data-i18n="r2_t">Alerta de vencimento</h3><p data-i18n="r2_p">O aviso de produto próximo do vencimento não tem um número fixo de dias: ele varia de acordo com o produto. Depois da data, o produto aparece como vencido.</p></article>
+          <article class="card"><h3 data-i18n="r3_t">Rastreabilidade</h3><p data-i18n="r3_p">Cada emissão guarda data e hora, número de cópias e operador. Reimpressão e cancelamento guardam também o motivo.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pesquisa">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="places_title">Onde pesquisamos</h2>
+            <p class="lead" data-i18n="places_lead">Os lugares que visitamos para entender o problema na prática.</p>
+          </div>
+          <div class="rows">
+          <article class="row first-visit">
+            <figure class="place-photo row-photo first-visit-photo">
+              <span class="place-ph" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><small data-i18n="place_photo">Foto do local</small></span>
+              <img src="IMG/pesquisa/zezão.png" alt="Foto da Casa do Norte visitada" data-i18n-alt="place_alt" loading="lazy" onerror="this.remove()">
+            </figure>
+            <div class="row-body">
+              <p class="place-tag" data-i18n="place_tag">Casa do Norte</p>
+              <h3 data-i18n="vis1_t">Primeira visita</h3>
+              <dl><dt data-i18n="place_ask_l">O que perguntamos</dt><dd data-i18n="vis1_q">Como uma Casa do Norte funciona e como o mercado opera?</dd>
+              <dt data-i18n="place_found_l">O que aprendemos</dt><dd data-i18n="vis1_f">Foi a melhor visita que tivemos: eles nos disseram que, ao longo de cerca de 25 anos, encontraram várias soluções para os problemas do dia a dia e quase sempre com o apoio da tecnologia. Percebemos que casas do Norte podem usar ferramentas para controlar o estoque, acompanhar a validade dos produtos e organizar lotes e etiquetas, além de registrar vendas e consultar o histórico de cada mercadoria.</dd></dl>
+            </div>
+          </article>
+          <article class="row">
+            <figure class="place-photo row-photo">
+              <span class="place-ph" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><small data-i18n="place_photo">Foto do local</small></span>
+              <img src="IMG/pesquisa/nordestina.png" alt="Foto da Casa do Norte visitada" data-i18n-alt="place_alt" loading="lazy" onerror="this.remove()">
+            </figure>
+            <div class="row-body">
+              <p class="place-tag" data-i18n="place_tag">Casa do Norte</p>
+              <h3 data-i18n="vis2_t">Segunda visita: a etiqueta</h3>
+              <dl><dt data-i18n="place_ask_l">O que perguntamos</dt><dd data-i18n="vis2_q">Como as etiquetas são feitas hoje e quais informações precisam aparecer para identificar cada produto?</dd>
+              <dt data-i18n="place_found_l">O que aprendemos</dt><dd data-i18n="vis2_f">Depois de entender a rotina das Casas do Norte, surgiu a ideia de criar uma etiqueta mais clara e completa. Voltamos a conversar com esses estabelecimentos para entender como as etiquetas eram preenchidas, quais dados não podiam faltar e quais dificuldades apareciam no processo. Essa escuta reforçou nossa hipótese: uma etiqueta padronizada, gerada a partir dos dados do lote, poderia reduzir esquecimentos e facilitar a identificação dos produtos.</dd></dl>
+            </div>
+          </article>
+          <article class="row third-visit">
+            <figure class="place-photo row-photo third-visit-photo">
+              <span class="place-ph" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><small data-i18n="place_photo">Foto do local</small></span>
+              <img src="IMG/pesquisa/Casa do norte climax.png" alt="Foto da Casa do Norte visitada" data-i18n-alt="place_alt" loading="lazy" onerror="this.remove()">
+            </figure>
+            <div class="row-body">
+              <p class="place-tag" data-i18n="place_tag">Casa do Norte</p>
+              <h3 data-i18n="vis3_t">Terceira visita: validade e histórico</h3>
+              <dl><dt data-i18n="place_ask_l">O que perguntamos</dt><dd data-i18n="vis3_q">Como acompanhar os prazos, localizar lotes perto do vencimento e recuperar o histórico das etiquetas?</dd>
+              <dt data-i18n="place_found_l">O que aprendemos</dt><dd data-i18n="vis3_f">A pesquisa mostrou que não basta informar a validade na etiqueta: também é importante acompanhar os prazos e conseguir consultar o que aconteceu com cada lote. Sem um histórico centralizado, encontrar dados depois de uma reimpressão ou de um cancelamento podia depender de anotações avulsas. Essa necessidade orientou recursos do sistema como o cálculo da validade, os alertas de vencimento e o registro das emissões para consulta.</dd></dl>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="identidade" aria-labelledby="idTitle">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow" data-i18n="ouid_eyebrow">Identidade visual</p>
+            <h2 id="idTitle" data-i18n="ouid_title">A marca Ouro do Norte</h2>
+            <p data-i18n="ouid_p1">A logo é um sol de traços irregulares, que lembra o sol forte do Norte e Nordeste e o jeito artesanal do que é feito à mão. Ela reúne a referência do lugar, o estilo da cultura e cores fortes numa identidade única.</p>
+            <p data-i18n="ouid_p2">A versão restrita, em branco, é a que vai nas etiquetas do sistema. As cores principais, amarelo e laranja (também em gradiente), devem estar sempre presentes; o marrom e o preto são de apoio e não devem passar de 30% da área da peça.</p>
+            <p data-i18n="ouid_p3">O material completo tem 6 páginas: apresentação, logo principal, uso das cores, logo restrita, paleta primária e secundária e encerramento.</p>
+            <ul class="swatches swatches-big" aria-label="Paleta" data-i18n-aria="ouid_sw"><li><i style="background:#ffde59"></i><b data-i18n="sw1_n">Amarelo</b><span>#FFDE59</span><em data-i18n="sw1_r">cor principal</em></li><li><i style="background:#ff914d"></i><b data-i18n="sw2_n">Laranja</b><span>#FF914D</span><em data-i18n="sw2_r">cor principal</em></li><li><i style="background:#976a26"></i><b data-i18n="sw3_n">Marrom</b><span>#976A26</span><em data-i18n="sw3_r">cor de apoio</em></li><li><i style="background:#000000"></i><b data-i18n="sw4_n">Preto</b><span>#000000</span><em data-i18n="sw4_r">cor de apoio</em></li></ul>
+          </div>
+          <div>
+            <button type="button" class="viewer-card" data-viewer="ouro">
+            <img src="IMG/identidade/ouro-2.jpg" alt="" loading="lazy">
+            <span class="vc-body"><strong data-i18n="ouid_open">Abrir a identidade visual</strong><span data-i18n="ouid_open_s">6 páginas · abre aqui no site</span></span>
+            <span class="vc-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+            <p class="vc-note" data-i18n="bhid_note">Dá para ampliar, abrir em tela cheia e baixar o PDF.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cta-ouro">
+        <div class="wrap cta-band">
+          <div>
+            <h2 data-i18n="ocata_t">Quer algo assim para o seu negócio?</h2>
+            <p data-i18n="ocata_p">Veja como foi feito ou peça um orçamento.</p>
+          </div>
+          <div class="cta-row">
+            <a href="bastidores.html" class="cta-button"><span class="arrow-circle" aria-hidden="true">&rarr;</span><span class="cta-text" data-i18n="req_cta">Ver os bastidores</span></a>
+            <a href="contatos.html?assunto=orcamento" class="cta-button"><span class="arrow-circle" aria-hidden="true">&rarr;</span><span class="cta-text" data-i18n="scta_btn">Pedir orçamento</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="siteFooter"></footer>
+
+    <!-- AMPLIAR IMAGEM -->
+    <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada" data-i18n-aria="lb_label">
+      <div class="lb-bar">
+        <span class="lb-title"></span>
+        <div class="stepper">
+          <button type="button" data-lb="out" data-i18n-aria="lb_out" aria-label="Diminuir">−</button>
+          <output data-lb-value aria-live="polite">100%</output>
+          <button type="button" data-lb="in" data-i18n-aria="lb_in" aria-label="Aumentar">+</button>
+          <button type="button" data-lb="close" data-i18n="lb_close">Fechar</button>
+        </div>
+      </div>
+      <div class="lb-stage"><img src="" alt=""></div>
+    </dialog>
+
+    <script src="./JS/config.js"></script>
+    <script src="./JS/textos.js"></script>
+    <script src="./JS/header.js"></script>
+    <script src="./JS/footer.js"></script>
+    <script src="./JS/i18n.js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>

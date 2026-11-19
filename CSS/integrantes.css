@@ -1,0 +1,78 @@
+/* =========================================================
+   INTEGRANTES — só o que é desta página.
+   Header, estrelas, cores, botões de zoom e idioma vêm do
+   style.css (carregue o style.css ANTES deste arquivo).
+   A foto cresce com o botão "tamanho das imagens" (--img-scale).
+   ========================================================= */
+
+.members-section {
+  padding-top: 9rem;
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.members-header { margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+.members-header h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+/* Cada integrante: foto de um lado, texto do outro */
+.member-row {
+  --foto: min(calc(380px * var(--img-scale)), 60%);
+  display: grid;
+  grid-template-columns: minmax(0, var(--foto)) minmax(0, 1fr);
+  gap: clamp(1.8rem, 5vw, 4rem);
+  align-items: center;
+}
+
+/* Os integrantes pares ficam com a foto à direita */
+.member-row:nth-child(even) { grid-template-columns: minmax(0, 1fr) minmax(0, var(--foto)); }
+.member-row:nth-child(even) .member-photo { grid-column: 2; grid-row: 1; }
+.member-row:nth-child(even) .member-info  { grid-column: 1; grid-row: 1; }
+
+.member-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(18, 10, 28, 0.8);
+  box-shadow: -14px 14px 34px rgba(0, 0, 0, 0.55);
+}
+.member-row:nth-child(even) .member-photo { box-shadow: 14px 14px 34px rgba(0, 0, 0, 0.55); }
+.member-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.member-badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  max-width: calc(100% - 2rem);
+  background: var(--lav);
+  color: #1a0f2b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5em 1.1em;
+  border-radius: 999px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.member-role { color: var(--lav); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.7rem; }
+.member-info h2 { font-size: clamp(1.5rem, 2.6vw, 2.2rem); max-width: 22ch; margin-bottom: 1.1rem; }
+.member-desc { margin-bottom: 1.6rem; }
+.member-spec { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+.member-spec-label { color: var(--ink-mute); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+.member-spec p:last-child { font-size: 0.95rem; }
+
+/* Telas pequenas: foto em cima, texto embaixo */
+@media (max-width: 992px) {
+  .member-row,
+  .member-row:nth-child(even) { grid-template-columns: minmax(0, 1fr); gap: 1.8rem; }
+  .member-row .member-photo,
+  .member-row:nth-child(even) .member-photo,
+  .member-row .member-info,
+  .member-row:nth-child(even) .member-info { grid-column: 1; grid-row: auto; }
+  .member-photo { width: min(100%, calc(380px * var(--img-scale))); margin-inline: auto; }
+}

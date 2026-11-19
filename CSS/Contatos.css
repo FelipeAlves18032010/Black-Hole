@@ -1,0 +1,118 @@
+/* =========================================================
+   CONTATOS — só o que é desta página.
+   Cabeçalho, estrelas, cores, botões e rodapé vêm do style.css
+   (carregue o style.css ANTES deste arquivo).
+   ========================================================= */
+
+/* ---------- Banner ----------
+   Para usar uma imagem de fundo: salve em IMG/Banner-Contatos.png.
+   Sem a imagem, aparece só o degradê roxo. */
+.ct-banner {
+  position: relative; isolation: isolate; overflow: clip; text-align: center;
+  padding: clamp(9.5rem, 17vw, 12.5rem) 0 clamp(6.5rem, 11vw, 8.5rem);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse 70% 90% at 50% 0%, rgba(90, 43, 216, .55), transparent 70%),
+    linear-gradient(180deg, rgba(57, 16, 88, .55) 0%, rgba(13, 11, 20, .35) 100%),
+    url("../IMG/Banner-Contatos.png") center / cover no-repeat;
+}
+/* órbitas decorativas, no mesmo estilo do buraco negro da página inicial */
+.ct-banner::before, .ct-banner::after {
+  content: ""; position: absolute; z-index: -1; left: 50%; top: 100%; border: 1px solid rgba(214, 160, 255, .16);
+  border-radius: 50%; translate: -50% -50%; pointer-events: none;
+}
+.ct-banner::before { width: min(62rem, 130vw); aspect-ratio: 3 / 1; }
+.ct-banner::after  { width: min(44rem, 95vw);  aspect-ratio: 3 / 1; border-color: rgba(214, 160, 255, .1); }
+
+.ct-banner h1 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 400; margin-bottom: 1rem; }
+.ct-banner .lead { margin-inline: auto; max-width: 40ch; color: var(--ink); }
+.ct-banner .eyebrow { margin-inline: auto; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.82rem; }
+
+/* ---------- Cartão principal (sobe em cima do banner) ---------- */
+.ct-main { position: relative; z-index: 2; padding-bottom: clamp(3rem, 8vw, 5.5rem); }
+.ct-card {
+  width: min(100% - 2 * var(--gutter), 66rem); margin: calc(-1 * clamp(3rem, 6vw, 4.5rem)) auto 0;
+  display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr);
+  border: 1px solid rgba(214, 160, 255, .28); border-radius: 1.3rem; overflow: hidden;
+  background: rgba(14, 9, 24, .9);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  box-shadow: 0 2rem 4.5rem -1.5rem rgba(90, 43, 216, .6), 0 0 0 1px rgba(0, 0, 0, .4);
+}
+.ct-card h2 { font-size: clamp(1.45rem, 2.4vw, 1.85rem); font-weight: 400; margin-bottom: 0.8rem; max-width: none; }
+
+/* lado esquerdo: informações */
+.ct-info {
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(138, 76, 240, .35), transparent 70%),
+    linear-gradient(160deg, rgba(90, 43, 216, .32), rgba(242, 139, 255, .05));
+  border-right: 1px solid var(--line);
+}
+.ct-info > p { font-size: 0.97rem; margin-bottom: 1.8rem; }
+.ct-list { list-style: none; display: grid; gap: 1.4rem; padding-bottom: 1.8rem; border-bottom: 1px solid var(--line); }
+.ct-list li { display: flex; gap: 1rem; align-items: flex-start; }
+.ct-ico {
+  flex: none; width: 2.9rem; height: 2.9rem; display: grid; place-items: center; border-radius: 50%; color: #fff;
+  background: linear-gradient(135deg, var(--violet), #8a4cf0); box-shadow: 0 0 22px rgba(138, 76, 240, .55);
+}
+.ct-list h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.15rem; color: #fff; }
+.ct-list p { font-size: 0.95rem; color: var(--ink-dim); overflow-wrap: anywhere; }
+.ct-list a { color: var(--lav-soft); text-decoration: none; }
+.ct-list a:hover { color: #fff; text-decoration: underline; }
+.ct-social { padding-top: 1.6rem; }
+.ct-social h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.9rem; color: #fff; }
+
+/* lado direito: formulário */
+.ct-form { padding: clamp(1.8rem, 4vw, 2.8rem); }
+.ct-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; margin-bottom: 1.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+.field-full { grid-column: 1 / -1; }
+.field label { font-size: 0.88rem; font-weight: 500; color: var(--ink-dim); }
+.field input, .field textarea {
+  width: 100%; font: inherit; font-size: 0.95rem; color: #fff; padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, .06); border: 1px solid var(--line); border-radius: 0.7rem;
+  transition: border-color .25s, background .25s, box-shadow .25s;
+}
+.field textarea { resize: vertical; min-height: 8rem; }
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-mute); opacity: 1; }
+.field input:hover, .field textarea:hover { border-color: rgba(214, 160, 255, .4); }
+.field input:focus, .field textarea:focus {
+  outline: none; border-color: var(--lav); background: rgba(214, 160, 255, .08); box-shadow: 0 0 0 3px rgba(214, 160, 255, .22);
+}
+.field [aria-invalid="true"] { border-color: #ff7a9c; box-shadow: 0 0 0 3px rgba(255, 122, 156, .2); }
+
+.ct-send {
+  width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem; cursor: pointer;
+  font: inherit; font-weight: 600; font-size: 1rem; letter-spacing: 0.04em; color: #fff; border: 0; border-radius: 999px; padding: 0.95rem 1.5rem;
+  background: linear-gradient(90deg, var(--violet), #8a4cf0 60%, #b36cf5);
+  box-shadow: 0 10px 28px -8px rgba(138, 76, 240, .8);
+  transition: transform .25s, filter .25s, box-shadow .25s;
+}
+.ct-send:hover { transform: translateY(-2px); filter: brightness(1.12); box-shadow: 0 14px 34px -8px rgba(138, 76, 240, .95); }
+.ct-send:active { transform: translateY(0); }
+.ct-note { margin-top: 0.9rem; font-size: 0.82rem; color: var(--ink-mute); text-align: center; max-width: none; }
+.ct-status { min-height: 1.4em; margin-top: 0.5rem; font-size: 0.9rem; text-align: center; color: var(--lav-soft); max-width: none; }
+.ct-status.erro { color: #ffb4c8; }
+
+/* ---------- Mapa ---------- */
+.ct-map-section { padding-top: clamp(1rem, 3vw, 2rem); border-top: 0 !important; }
+.ct-map {
+  position: relative; border: 1px solid rgba(214, 160, 255, .28); border-radius: 1.3rem; overflow: hidden;
+  background: var(--bg-soft); box-shadow: 0 1.5rem 3.5rem -1.5rem rgba(90, 43, 216, .6);
+}
+.ct-map iframe {
+  display: block; width: 100%; height: clamp(18rem, 46vw, 28rem); border: 0;
+  /* deixa o mapa escuro, combinando com o site */
+  filter: invert(92%) hue-rotate(180deg) saturate(.75) contrast(.92);
+}
+/* véu roxo leve por cima do mapa; não atrapalha o clique */
+.ct-map::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(90, 43, 216, .14), rgba(90, 43, 216, .05)); mix-blend-mode: screen; }
+
+/* ---------- Telas pequenas ---------- */
+@media (max-width: 62rem) {
+  .ct-card { grid-template-columns: minmax(0, 1fr); }
+  .ct-info { border-right: 0; border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 36rem) {
+  .ct-fields { grid-template-columns: minmax(0, 1fr); }
+}

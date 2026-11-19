@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title_serv">Serviços — Black Hole</title>
+    <meta name="description" data-i18n-content="desc_serv" content="Sites, lojas virtuais, sistemas sob medida, identidade visual básica e suporte: tecnologia para resolver os problemas de pequenos negócios.">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="IMG/pwa/apple-touch-icon.png">
+    <meta name="theme-color" content="#0d0b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Black Hole">
+    <!-- Aplica o tamanho de texto/imagem salvo antes da página aparecer -->
+    <script src="./JS/acessibilidade.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+    <div class="starfield" id="starfield" aria-hidden="true"></div>
+
+    <header class="topbar" id="siteHeader"></header>
+
+    <main id="conteudo">
+      <header class="page-hero">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="serv_eyebrow">O que fazemos</p>
+          <h1 data-i18n="serv_h1">Tecnologia que resolve problema de verdade</h1>
+          <p class="lead" data-i18n="serv_lead">Não é só site e loja virtual. A gente cria sites, sistemas e organização de dados para tirar um problema concreto do seu dia a dia, e explica tudo sem complicação.</p>
+          <div class="crumbs"><a class="chip" href="#problemas" data-i18n="chip_prob">Problemas que resolvemos</a><a class="chip" href="#pacote" data-i18n="chip_pack">Pacote de lançamento</a><a class="chip" href="#orcamento" data-i18n="chip_budget">Como é o orçamento</a><a class="chip" href="#para-quem" data-i18n="chip_who">Para quem</a></div>
+        </div>
+      </header>
+      <section class="section" id="problemas" aria-labelledby="probTitle">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="probTitle" data-i18n="prob_title">Você tem um problema? A gente tem uma solução</h2>
+            <p class="lead" data-i18n="prob_lead">Veja o problema que você reconhece e o que fazemos para resolver.</p>
+          </div>
+          <div class="grid grid-3">
+            <article class="card prob"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg></span>
+              <p class="prob-q" data-i18n="pr1_q">“Só vendo por indicação e Instagram”</p>
+              <h3 data-i18n="pr1_t">Site institucional e loja virtual</h3>
+              <p data-i18n="pr1_p">Um site rápido, bonito e fácil de achar no Google, para o seu negócio aparecer e vender também para quem ainda não te conhece.</p></article>
+            <article class="card prob"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+              <p class="prob-q" data-i18n="pr2_q">“Controlo estoque, validade e preço em caderno”</p>
+              <h3 data-i18n="pr2_t">Sistema web sob medida</h3>
+              <p data-i18n="pr2_p">Um sistema feito para o seu processo, que calcula, organiza e imprime por você. Foi assim que nasceu o Ouro do Norte, de etiquetas e lotes.</p></article>
+            <article class="card prob"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+              <p class="prob-q" data-i18n="pr3_q">“Meus dados estão espalhados”</p>
+              <h3 data-i18n="pr3_t">Banco de dados organizado</h3>
+              <p data-i18n="pr3_p">Clientes, produtos e histórico num só lugar, seguros e fáceis de consultar quando você precisar.</p></article>
+            <article class="card prob"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="9.5" r="1.3"/><circle cx="15.5" cy="9.5" r="1.3"/><circle cx="12" cy="15.5" r="1.3"/></svg></span>
+              <p class="prob-q" data-i18n="pr4_q">“Minha marca ainda não tem cara”</p>
+              <h3 data-i18n="pr4_t">Identidade visual básica</h3>
+              <p data-i18n="pr4_p">Logo, cores e estilo para o seu negócio ser reconhecido no site, na embalagem e nas redes sociais.</p></article>
+            <article class="card prob"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              <p class="prob-q" data-i18n="pr5_q">“Não sei nem por onde começar”</p>
+              <h3 data-i18n="pr5_t">Consultoria simples</h3>
+              <p data-i18n="pr5_p">Uma conversa para entender o que o seu negócio realmente precisa antes de você investir em tecnologia.</p></article>
+            <article class="card prob"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/></svg></span>
+              <p class="prob-q" data-i18n="pr6_q">“Depois da entrega, ninguém atende”</p>
+              <h3 data-i18n="pr6_t">Suporte de quem fez</h3>
+              <p data-i18n="pr6_p">O mesmo time que criou o seu projeto continua por perto para corrigir, melhorar e tirar dúvidas.</p></article>
+            </div>
+        </div>
+      </section>
+      <section class="section" id="pacote">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow" data-i18n="pack_eyebrow">Nosso carro-chefe</p>
+            <h2 data-i18n="pack_title">Pacote de lançamento</h2>
+            <p data-i18n="pack_p">Pensado para quem está começando a investir em presença digital. Em um único projeto você recebe:</p>
+            <ul class="checklist"><li data-i18n="pk1">Identidade visual básica</li><li data-i18n="pk2">Site institucional ou loja virtual sob medida</li><li data-i18n="pk3">Orientação para as redes sociais</li><li data-i18n="pk4">Treinamento para você atualizar o conteúdo sozinho</li></ul>
+          </div>
+          <div class="card pack-side">
+            <h3 data-i18n="mat_title">Materiais para fortalecer a marca</h3>
+            <p data-i18n="mat_p">Para a marca aparecer bem também fora do site:</p>
+            <ul class="checklist"><li data-i18n="mt1">Cartão de visita digital</li><li data-i18n="mt2">Apresentação comercial em PDF ou slides</li><li data-i18n="mt3">Modelos de posts para redes sociais</li><li data-i18n="mt4">Kit de boas-vindas, passo a passo para quem nunca contratou um site</li></ul>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="orcamento">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="bud_title">Como funciona o orçamento</h2>
+            <p class="lead" data-i18n="bud_lead">Três passos, em português claro.</p>
+          </div>
+          <ol class="steps steps-3"><li class="step"><span class="step-n" aria-hidden="true">01</span><h3 data-i18n="bd1_t">Conversa</h3><p data-i18n="bd1_p">Você conta o que precisa. Se for preciso, a gente visita o local e ajuda a descobrir o que realmente vale investir.</p></li><li class="step"><span class="step-n" aria-hidden="true">02</span><h3 data-i18n="bd2_t">Proposta fechada</h3><p data-i18n="bd2_p">Você recebe o valor e o prazo antes de começar, por escrito. Sem taxa escondida e sem surpresa depois.</p></li><li class="step"><span class="step-n" aria-hidden="true">03</span><h3 data-i18n="bd3_t">Entrega e acompanhamento</h3><p data-i18n="bd3_p">Colocamos no ar, explicamos como usar e seguimos por perto com suporte do mesmo time.</p></li></ol>
+        </div>
+      </section>
+      <section class="section" id="para-quem">
+        <div class="wrap prose">
+          <h2 data-i18n="who_t">Para quem trabalhamos</h2>
+          <p data-i18n="who_p1">Donos de pequenos negócios locais: queijarias, padarias, lojas de bairro, prestadores de serviço e microempreendedores. Gente que já fatura, vive o dia a dia do próprio negócio, não tem tempo nem equipe de TI e quer um parceiro de confiança para resolver o “problema do site” de forma simples.</p>
+          <p data-i18n="who_p2">Atendemos em todo o Brasil, com foco inicial na região Sudeste.</p>
+        </div>
+      </section>
+
+      <section class="section" id="cta-serv">
+        <div class="wrap cta-band">
+          <div>
+            <h2 data-i18n="scta_title">Vamos pedir um orçamento?</h2>
+            <p data-i18n="scta_p">Conte o que você precisa. A gente responde por e-mail.</p>
+          </div>
+          <a href="contatos.html?assunto=orcamento" class="cta-button"><span class="arrow-circle" aria-hidden="true">&rarr;</span><span class="cta-text" data-i18n="scta_btn">Pedir orçamento</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="siteFooter"></footer>
+
+    <script src="./JS/config.js"></script>
+    <script src="./JS/textos.js"></script>
+    <script src="./JS/header.js"></script>
+    <script src="./JS/footer.js"></script>
+    <script src="./JS/i18n.js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
