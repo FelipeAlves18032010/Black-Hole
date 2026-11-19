@@ -1,4 +1,4 @@
-const VERSAO = "bh-v8";
+const VERSAO = "bh-v9";
 const ARQUIVOS = [
   "./", "index.html", "historia.html", "servicos.html", "ouro-do-norte.html", "bastidores.html", "integrantes.html", "contatos.html",
   "CSS/style.css", "CSS/Contatos.css", "CSS/integrantes.css",
