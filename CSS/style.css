@@ -892,6 +892,7 @@ html.bh-enter::after { animation: bhRevelar .7s cubic-bezier(.6, 0, .3, 1) forwa
 }
 .viewer-card:hover, .viewer-card:focus-visible { border-color: var(--lav); background: rgba(214, 160, 255, .08); transform: translateY(-3px); }
 .viewer-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 0.6rem; border: 1px solid var(--line); }
+.viewer-card img.ouro-preview { object-fit: contain; background: radial-gradient(circle, rgba(151, 106, 38, .28), var(--card) 75%); }
 .vc-body strong { display: block; font-size: 1.05rem; font-weight: 600; }
 .vc-body span { display: block; margin-top: 0.2rem; font-size: 0.88rem; color: var(--ink-mute); }
 .vc-arrow { width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--pink)); font-size: 1.2rem; margin-right: 0.3rem; }
